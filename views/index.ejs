@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Database</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fish List</h1>
+        <a href="/add" class="button">Add New Fish</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Ikan</th>
+                    <th>Ciri-ciri</th>
+                    <th>Foto</th>
+                    <th>Famili</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% items.forEach(item => { %>
+                    <tr>
+                        <td><%= item.nama_ikan %></td>
+                        <td><%= item.ciri_ciri %></td>
+                        <td><img src="<%= item.foto %>" alt="Fish Image"></td>
+                        <td><%= item.famili %></td>
+                        <td>
+                            <a href="/edit/<%= item.id %>" class="button">Edit</a>
+                            <a href="/delete/<%= item.id %>" class="button">Delete</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

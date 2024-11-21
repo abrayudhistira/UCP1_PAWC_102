@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Fish</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Fish</h1>
+        <form action="/edit/<%= item.id %>" method="POST" enctype="multipart/form-data">
+            <label for="nama_ikan">Nama Ikan:</label>
+            <input type="text" name="nama_ikan" value="<%= item.nama_ikan %>" required><br>
+            <label for="ciri_ciri">Ciri-ciri:</label>
+            <textarea name="ciri_ciri" required><%= item.ciri_ciri %></textarea><br>
+            <label for="foto">Foto:</label>
+            <input type="file" name="foto"><br>
+            <input type="hidden" name="foto" value="<%= item.foto %>">
+            <label for="famili">Famili:</label>
+            <input type="text" name="famili" value="<%= item.famili %>" required><br>
+            <button type="submit">Update Fish</button>
+        </form>
+        <div class="center-button">
+            <a href="/" class="button">Back to List</a>
+        </div>
+    </div>
+</body>
+</html>

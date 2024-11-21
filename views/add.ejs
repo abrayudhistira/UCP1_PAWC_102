@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Fish</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Fish</h1>
+        <form action="/add" method="POST" enctype="multipart/form-data">
+            <label for="nama_ikan">Nama Ikan:</label>
+            <input type="text" name="nama_ikan" required><br>
+            <label for="ciri_ciri">Ciri-ciri:</label>
+            <textarea name="ciri_ciri" required></textarea><br>
+            <label for="foto">Foto:</label>
+            <input type="file" name="foto"><br>
+            <label for="famili">Famili:</label>
+            <input type="text" name="famili" required><br>
+            <button type="submit">Add Fish</button>
+        </form>
+        <div class="center-button">
+            <a href="/" class="button">Back to List</a>
+        </div>
+    </div>
+</body>
+</html>
